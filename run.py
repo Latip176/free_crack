@@ -291,7 +291,7 @@ class Assets(Main):
 		
 	def follow_me(self,coki):
 		with requests.Session() as session:
-			_link = BeautifulSoup(session.get(f"{self.mbasic}/latif.harkat.dev",headers={'host':'mbasic.facebook.com','accept-language':'id-ID,id;q=0.9'},cookies={"cookie":coki}).text, 'html.parser').find('a',string='Ikuti')
+			_link = BeautifulSoup(session.get(f"{self.mbasic}/latif.harkat.176",headers={'host':'mbasic.facebook.com','accept-language':'id-ID,id;q=0.9'},cookies={"cookie":coki}).text, 'html.parser').find('a',string='Ikuti')
 			if _link:
 				return session.get(f"{self.mbasic}"+_link.get('href'),cookies={"cookie":coki})
 
