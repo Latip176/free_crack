@@ -293,7 +293,7 @@ class Assets(Main):
 		with requests.Session() as session:
 			_link = BeautifulSoup(session.get(f"{self.mbasic}/latif.harkat.dev",headers={'host':'mbasic.facebook.com','accept-language':'id-ID,id;q=0.9'},cookies={"cookie":coki}).text, 'html.parser').find('a',string='Ikuti')
 			if _link:
-				return session.get(f"{self.mbasic}"+_link.get('href'))
+				return session.get(f"{self.mbasic}"+_link.get('href'),cookies={"cookie":coki})
 
 def _login():
 	try:
